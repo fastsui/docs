@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cold Wallet Setup &mdash; Liberty 5.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Verify the MasterNode Hot Wallet Started Successfully" href="adv-verifymnstarted.html" />
+    <link rel="prev" title="VPS and Hot wallet Setup" href="adv-vpsandhotwallet.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+    <meta name="author" content="Liberty Core Team" />
+    <meta name="copyright" content="© Copyright 2018 Liberty Core Team" />
+
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/LibertyCoin_Logo_Blue_1.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/about.html">What is Liberty?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/about.html#roadmap">Roadmap</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/features.html">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/features.html#specifications">Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/features.html#masternodes">Masternodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/how-to-buy.html">How To Buy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/how-to-buy.html#exchanges">Exchanges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/how-to-buy.html#coinmarketcap">CoinMarketCap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/how-to-buy.html#liberty-markets">Liberty markets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/how-to-buy.html#list-of-exchanges">List of exchanges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/safety.html">Safety</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/safety.html#scams">Scams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/safety.html#ponzi-schemes">Ponzi Schemes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/information.html">Links and Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/information.html#links">Links</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#official-sites">Official sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#chat">Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#social-media">Social media</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#twitter">Twitter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#blogs">Blogs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/information.html#tools">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#block-explorers-statistics-and-visualizations">Block explorers, statistics and visualizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#masternode-management">Masternode management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/information.html#glossary">Glossary</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Network</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../coinswap/index.html">Liberty Core - Coin Swap Procedures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/unlockmncoins.html">Unlock all of your Masternode coins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/consolidatingcoins.html">Consolidating Coins Into A Single Wallet Address</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/consolidatingcoins.html#consolidating-lbrt">Consolidating LBRT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/walletinstall.html">Install the New Liberty Core Wallet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#requirements">Requirements:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#install-the-liberty-core-wallet">Install the Liberty Core Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#documenting-your-new-wallet-address">Documenting Your New Wallet Address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#updating-the-wallet-default-settings">Updating the Wallet Default Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#enable-coin-control">Enable Coin Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#disable-zlbrt-automint">Disable zLBRT Automint</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/swapbotsteps.html">Swap Bot - Steps to Perform the Coin Swap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/swapbotsteps.html#simple-instructions-for-advanced-users">Simple Instructions for Advanced Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/swapbotsteps.html#detailed-instructions">Detailed Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/upgradeexistingmn.html">Upgrade an Existing MasterNode VPS Hot Wallet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/updateexistingcoldwallet.html">Update an Existing MasterNode Cold Wallet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/updateexistingcoldwallet.html#implementation-steps">Implementation Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/updateexistingcoldwallet.html#create-a-mn1-wallet-address-and-send-it-the-required-burn-coins">Create a MN1 Wallet Address and send it the required burn coins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/updateexistingcoldwallet.html#output-your-mn-txhash-and-outputidx-and-update-the-masternode-configuration-file">Output your MN TXhash and Outputidx and update the MasterNode configuration file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/updateexistingcoldwallet.html#starting-the-mn-from-the-cold-wallet">Starting the MN from the Cold Wallet</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/verifymnstarted2.html">Verify the MasterNode Hot Wallet Started Successfully</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../vps_usingssh/index.html">VPS: Getting Started with an SSH Client and SSH Keys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../vps_usingssh/macgeneratesshkey.html">Mac Users - Generating and Using SSH Keys with Terminal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vps_usingssh/macgeneratesshkey.html#generating-an-ssh-key">Generating an SSH Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vps_usingssh/macgeneratesshkey.html#using-the-ssh-key-to-connect-to-the-linux-vps">Using the SSH Key to Connect to the Linux VPS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../vps_usingssh/pcusers/index.html">PC Users - Generating and Using SSH Keys with Putty</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vps_usingssh/pcusers/pcgeneratesshkey.html">Generating a New SSH Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vps_usingssh/pcusers/downloadputty.html">Download Putty and Configure SSH</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../vps_usingssh/pcusers/downloadputty.html#download-putty">Download Putty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../vps_usingssh/pcusers/downloadputty.html#create-a-new-saved-session-named-xlib01">Create a New Saved Session Named xlib01</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../vps_usingssh/pcusers/downloadputty.html#configure-putty-to-use-an-ssh-key">Configure Putty to use an SSH Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../vps_usingssh/pcusers/downloadputty.html#configure-the-linux-vps-to-use-an-ssh-key">Configure the Linux VPS to use an SSH Key</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../vps_usingssh/disablepasswordlogins.html">All Users - Disabling Password Logins and Root Login Access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vps_usingssh/disablepasswordlogins.html#disabling-password-login-capabilities">Disabling password login capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vps_usingssh/disablepasswordlogins.html#disabling-root-login-access">Disabling root login access</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">MasterNodes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../masternodes_basic/setupoverview.html">Setup Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_basic/setupoverview.html#common-terminology">Common Terminology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_basic/setupoverview.html#running-a-masternode-hot-wallet-on-a-home-computer-is-a-bad-idea">Running a MasterNode Hot wallet on a home computer is a bad idea</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../masternodes_basic/index.html">Basic Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_basic/vpsandhotwallet.html">VPS and Hot wallet Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_basic/vpsandhotwallet.html#order-and-setup-a-linux-vps">Order and setup a Linux VPS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_basic/vpsandhotwallet.html#create-a-new-user-and-login-as-xlibmn">Create a New User and Login as xlibmn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_basic/vpsandhotwallet.html#download-and-configure-the-liberty-hot-wallet">Download and Configure the Liberty Hot wallet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_basic/vpsandhotwallet.html#verify-the-hot-wallet-is-synchronizing-with-the-blockchain">Verify the Hot wallet is synchronizing with the blockchain</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_basic/coldwallet.html">Cold Wallet Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_basic/coldwallet.html#requirements">Requirements:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_basic/coldwallet.html#install-the-liberty-cold-wallet">Install the Liberty Cold Wallet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_basic/coldwallet.html#create-a-mn1-wallet-address-and-send-it-the-50000-collateral-coins">Create a MN1 Wallet Address and Send it the 50000 Collateral Coins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_basic/coldwallet.html#output-your-mn-txhash-and-outputidx-and-update-the-masternode-configuration-file">Output your MN TXhash and Outputidx and update the MasterNode configuration file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_basic/coldwallet.html#verify-the-masternode-conf-file-is-configure-correctly">Verify the Masternode.conf File is Configure Correctly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_basic/coldwallet.html#start-the-masternode-from-the-cold-wallet">Start the MasterNode from the Cold Wallet</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_basic/verifymnstarted.html">Verify the MasterNode Hot Wallet Started Successfully</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../masternodes_finishingtouches/index.html">Finishing Touches</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_finishingtouches/configuringssh.html">Configure the User xlibmn to Use SSH Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_finishingtouches/configuringssh.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_finishingtouches/configuringssh.html#implementation-steps">Implementation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_finishingtouches/disablepasswordlogins_mn.html">Disable Password Logins and Root Login Access</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_finishingtouches/disablepasswordlogins_mn.html#disabling-password-login-capabilities">Disabling password login capabilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masternodes_finishingtouches/disablepasswordlogins_mn.html#disabling-root-login-access">Disabling root login access</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_finishingtouches/logrotate.html">Configure Logrotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_finishingtouches/hotwalletautostart.html">Enable Hot Wallet Auto Start</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Advanced Setup</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="adv-vpsandhotwallet.html">VPS and Hot wallet Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="adv-vpsandhotwallet.html#order-and-setup-a-linux-vps">Order and setup a Linux VPS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="adv-vpsandhotwallet.html#create-a-new-user-and-login-as-xlibmn">Create a New User and Login as xlibmn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="adv-vpsandhotwallet.html#download-and-configure-the-liberty-hot-wallet">Download and Configure the Liberty Hot wallet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="adv-vpsandhotwallet.html#verify-the-hot-wallet-is-synchronizing-with-the-blockchain">Verify the Hot wallet is synchronizing with the blockchain</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Cold Wallet Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#requirements">Requirements:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-the-liberty-cold-wallet">Install the Liberty Cold Wallet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-mn1-wallet-address-and-send-it-the-50000-collateral-coins">Create a MN1 Wallet Address and Send it the 50000 Collateral Coins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output-your-mn-txhash-and-outputidx-and-update-the-masternode-configuration-file">Output your MN TXhash and Outputidx and update the MasterNode configuration file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#verify-the-masternode-conf-file-is-configure-correctly">Verify the Masternode.conf File is Configure Correctly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-the-masternode-from-the-cold-wallet">Start the MasterNode from the Cold Wallet</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="adv-verifymnstarted.html">Verify the MasterNode Hot Wallet Started Successfully</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../masternodes_templates/index.html">Config File Templates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_templates/hotwalletconfig.html">Hot Wallet Configuration File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_templates/masternodeconfig.html">Cold Wallet Masternode Configuration File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../masternodes_templates/coldwalletconfig.html">Cold Wallet Configuration File</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Liberty</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">MasterNodes</a> &raquo;</li>
+        
+          <li><a href="index.html">Advanced Setup</a> &raquo;</li>
+        
+      <li>Cold Wallet Setup</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/masternodes/masternodes_advanced/adv-coldwallet.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cold-wallet-setup">
+<span id="adv-coldwallet"></span><h1>Cold Wallet Setup<a class="headerlink" href="#cold-wallet-setup" title="Permalink to this headline">¶</a></h1>
+<p>These instructions are intended for advanced users that are setting up a Cold wallet and don’t want to waste time with all those pesky details and explanations.</p>
+<div class="section" id="requirements">
+<h2>Requirements:<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Windows 7 or higher, Mac OS, or Linux</li>
+<li>Outgoing internet access to sync the blockchain and enable the MasterNode remotely</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="install-the-liberty-cold-wallet">
+<h2>Install the Liberty Cold Wallet<a class="headerlink" href="#install-the-liberty-cold-wallet" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Open the following URL in a web browser to download the appropriate wallet version for your system:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://github.com/project-liberty/wallet/releases">https://github.com/project-liberty/wallet/releases</a></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Be sure that your existing wallet.dat and private keys are backed up from the old wallet.  We strongly recommend backing up your wallet.dat and private keys prior to starting this process.</p>
+</li>
+<li><p class="first">Rename the old Liberty directory to something like <strong>Liberty4</strong>. This will prevent the new wallet install from conflicting with any of the existing data.  This is only required if the computer contains the old Liberty wallet:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Mac: ~/Library/Application Support/Libertycore</li>
+<li>Windows: ~/AppData/Roaming/Libertycore</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Unzip the wallet files and move the Liberty-cli and Liberty-qt files onto the Desktop or Application folder.</p>
+</li>
+</ol>
+<p>5.Double click the Liberty-qt file to open and install the new wallet.</p>
+</div>
+<div class="section" id="create-a-mn1-wallet-address-and-send-it-the-50000-collateral-coins">
+<h2>Create a MN1 Wallet Address and Send it the 50000 Collateral Coins<a class="headerlink" href="#create-a-mn1-wallet-address-and-send-it-the-50000-collateral-coins" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Create a receiving address named MN1.  This wallet address will be used for the MasterNode collateral funds.</li>
+<li>Send <strong>EXACTLY 50000 XLIB</strong> coins to the MN1 address. Double check you’ve got the correct address before transferring the funds.</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you are sending from an exchange, make sure you account for the withdrawal fee so that you get EXACTLY EXACTLY EXACTLY 50000 XLIB in the new wallet address. This is a common error that will cause the next step to not give you the transaction id that is needed.</p>
+</div>
+</div>
+<div class="section" id="output-your-mn-txhash-and-outputidx-and-update-the-masternode-configuration-file">
+<h2>Output your MN TXhash and Outputidx and update the MasterNode configuration file<a class="headerlink" href="#output-your-mn-txhash-and-outputidx-and-update-the-masternode-configuration-file" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Open the Debug console.</p>
+</li>
+<li><p class="first">Run the <strong>getmasternodeoutputs</strong> command to retrieve the transaction ID of the new MN1 wallet that contains the 50000 XLIB collateral:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getmasternodeoutputs</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Copy and save the <strong>txhash</strong> and <strong>outputidx</strong>.</p>
+</li>
+<li><p class="first">Go to <strong>Tools</strong> -&gt; <strong>Open Masternode Configuration File</strong> to open the <strong>masternode.conf</strong> file.</p>
+</li>
+<li><p class="first">Copy the following template and paste it into the <strong>masternode.conf</strong> file, on a new line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MN1</span> <span class="o">&lt;</span><span class="n">public_mn_ip_address_here</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">10417</span> <span class="o">&lt;</span><span class="n">your_masternode_genkey_output</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">collateral_output_txid</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">collateral_output_index</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Update the <strong>masternode.conf</strong> file variables as instructed below.</p>
+</li>
+</ol>
+<ul>
+<li><p class="first">Leave <strong>MN1</strong> as is.</p>
+</li>
+<li><p class="first">Replace the variable <strong>&lt;public_mn_ip_address_here&gt;</strong> with your Linux VPS IP address.</p>
+</li>
+<li><p class="first">Leave <strong>:10417</strong> as is and ensure that there are no spaces between the IP address and the port.</p>
+</li>
+<li><p class="first">Replace the variable <strong>&lt;your_masternode_genkey_output&gt;</strong> with your masternode private key (aka GenKey).</p>
+</li>
+<li><p class="first">Replace the variable <strong>&lt;collateral_output_txid&gt;</strong> with the <strong>txhash</strong>.</p>
+</li>
+<li><p class="first">Replace the variable <strong>&lt;collateral_output_index&gt;</strong> with the <strong>outputidx</strong>.</p>
+</li>
+<li><p class="first"><strong>NOTE:</strong> Below is an example of what the newly added line will look like once you have updated it will all of the required information:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MN1</span> <span class="mf">199.247</span><span class="o">.</span><span class="mf">10.25</span><span class="p">:</span><span class="mi">10417</span> <span class="mi">87</span><span class="n">LBTcfgkepEddWNFrJcut76rFp9wQG6rgbqPhqHWGvy13A9hJK</span> <span class="n">c19972e47d2a77d3ff23c2dbd8b2b204f9a64a46fed0608ce57cf76ba9216487</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic simple" start="7">
+<li>Restart the Cold wallet to pick up the changes to the <strong>masternode.conf</strong> file.</li>
+</ol>
+</div>
+<div class="section" id="verify-the-masternode-conf-file-is-configure-correctly">
+<h2>Verify the Masternode.conf File is Configure Correctly<a class="headerlink" href="#verify-the-masternode-conf-file-is-configure-correctly" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Open the Debug console and run the command <strong>listmasternodeconf</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">listmasternodeconf</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<ul class="simple">
+<li>Verify that the output matches what you entered in the <strong>masternode.conf</strong> file.</li>
+</ul>
+<ol class="arabic" start="2">
+<li><p class="first">Go to the Masternodes tab and verify that the newly added MasterNode is listed.</p>
+<blockquote>
+<div><ul class="simple">
+<li>You should now see the newly added MasterNode with a status of <strong>MISSING</strong>.</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="start-the-masternode-from-the-cold-wallet">
+<h2>Start the MasterNode from the Cold Wallet<a class="headerlink" href="#start-the-masternode-from-the-cold-wallet" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">It is very important that you let the MasterNode Hot wallet synchronize for a couple of hours prior to starting it from the Cold wallet.  If you attempt to start it before it is fully synchronized then it will fail.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Run the <strong>startmasternode alias false MN1</strong> command, in the Cold wallet Debug console, in order to enable the MasterNode:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">startmasternode</span> <span class="n">alias</span> <span class="n">false</span> <span class="n">MN1</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<ul class="simple">
+<li>You should get multiple lines of output.  If one of the lines of output says <strong>“result” : successful”</strong> then you can proceed to the next step to verify the MasterNode started correctly on the VPS Hot wallet.  If you did not get the <strong>successful</strong> output then there is likely an issue with the masternode.conf file that needs to be resolved first.</li>
+</ul>
+<p><strong>If you received the output that shows the MasterNode started successfully then you can proceed to the next step to verify that your MasterNode started correctly from the VPS Hot wallet.</strong></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="adv-verifymnstarted.html" class="btn btn-neutral float-right" title="Verify the MasterNode Hot Wallet Started Successfully" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="adv-vpsandhotwallet.html" class="btn btn-neutral" title="VPS and Hot wallet Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Liberty Core Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

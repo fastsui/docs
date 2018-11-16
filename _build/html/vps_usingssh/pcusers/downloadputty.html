@@ -1,0 +1,516 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Download Putty and Configure SSH &mdash; Liberty 5.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="All Users - Disabling Password Logins and Root Login Access" href="../disablepasswordlogins.html" />
+    <link rel="prev" title="Generating a New SSH Key" href="pcgeneratesshkey.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+    <meta name="author" content="Liberty Core Team" />
+    <meta name="copyright" content="© Copyright 2018 Liberty Core Team" />
+
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/LibertyCoin_Logo_Blue_1.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/about.html">What is Liberty?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/about.html#roadmap">Roadmap</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/features.html">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/features.html#specifications">Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/features.html#masternodes">Masternodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/how-to-buy.html">How To Buy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/how-to-buy.html#exchanges">Exchanges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/how-to-buy.html#coinmarketcap">CoinMarketCap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/how-to-buy.html#liberty-markets">Liberty markets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/how-to-buy.html#list-of-exchanges">List of exchanges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/safety.html">Safety</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/safety.html#scams">Scams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/safety.html#ponzi-schemes">Ponzi Schemes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/information.html">Links and Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/information.html#links">Links</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#official-sites">Official sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#chat">Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#social-media">Social media</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#twitter">Twitter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#blogs">Blogs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/information.html#tools">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#block-explorers-statistics-and-visualizations">Block explorers, statistics and visualizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../introduction/information.html#masternode-management">Masternode management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/information.html#glossary">Glossary</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Network</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../coinswap/index.html">Liberty Core - Coin Swap Procedures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/unlockmncoins.html">Unlock all of your Masternode coins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/consolidatingcoins.html">Consolidating Coins Into A Single Wallet Address</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/consolidatingcoins.html#consolidating-lbrt">Consolidating LBRT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/walletinstall.html">Install the New Liberty Core Wallet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#requirements">Requirements:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#install-the-liberty-core-wallet">Install the Liberty Core Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#documenting-your-new-wallet-address">Documenting Your New Wallet Address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#updating-the-wallet-default-settings">Updating the Wallet Default Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#enable-coin-control">Enable Coin Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/walletinstall.html#disable-zlbrt-automint">Disable zLBRT Automint</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/swapbotsteps.html">Swap Bot - Steps to Perform the Coin Swap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/swapbotsteps.html#simple-instructions-for-advanced-users">Simple Instructions for Advanced Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/swapbotsteps.html#detailed-instructions">Detailed Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/upgradeexistingmn.html">Upgrade an Existing MasterNode VPS Hot Wallet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/updateexistingcoldwallet.html">Update an Existing MasterNode Cold Wallet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/updateexistingcoldwallet.html#implementation-steps">Implementation Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/updateexistingcoldwallet.html#create-a-mn1-wallet-address-and-send-it-the-required-burn-coins">Create a MN1 Wallet Address and send it the required burn coins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/updateexistingcoldwallet.html#output-your-mn-txhash-and-outputidx-and-update-the-masternode-configuration-file">Output your MN TXhash and Outputidx and update the MasterNode configuration file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../coinswap/updateexistingcoldwallet.html#starting-the-mn-from-the-cold-wallet">Starting the MN from the Cold Wallet</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../coinswap/verifymnstarted2.html">Verify the MasterNode Hot Wallet Started Successfully</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">VPS: Getting Started with an SSH Client and SSH Keys</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../macgeneratesshkey.html">Mac Users - Generating and Using SSH Keys with Terminal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../macgeneratesshkey.html#generating-an-ssh-key">Generating an SSH Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../macgeneratesshkey.html#using-the-ssh-key-to-connect-to-the-linux-vps">Using the SSH Key to Connect to the Linux VPS</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">PC Users - Generating and Using SSH Keys with Putty</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pcgeneratesshkey.html">Generating a New SSH Key</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Download Putty and Configure SSH</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-putty">Download Putty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-new-saved-session-named-xlib01">Create a New Saved Session Named xlib01</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-putty-to-use-an-ssh-key">Configure Putty to use an SSH Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-the-linux-vps-to-use-an-ssh-key">Configure the Linux VPS to use an SSH Key</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../disablepasswordlogins.html">All Users - Disabling Password Logins and Root Login Access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../disablepasswordlogins.html#disabling-password-login-capabilities">Disabling password login capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../disablepasswordlogins.html#disabling-root-login-access">Disabling root login access</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../masternodes/index.html">MasterNodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../masternodes/masternodes_basic/setupoverview.html">Setup Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_basic/setupoverview.html#common-terminology">Common Terminology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_basic/setupoverview.html#running-a-masternode-hot-wallet-on-a-home-computer-is-a-bad-idea">Running a MasterNode Hot wallet on a home computer is a bad idea</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../masternodes/masternodes_basic/index.html">Basic Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_basic/vpsandhotwallet.html">VPS and Hot wallet Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_basic/vpsandhotwallet.html#order-and-setup-a-linux-vps">Order and setup a Linux VPS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_basic/vpsandhotwallet.html#create-a-new-user-and-login-as-xlibmn">Create a New User and Login as xlibmn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_basic/vpsandhotwallet.html#download-and-configure-the-liberty-hot-wallet">Download and Configure the Liberty Hot wallet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_basic/vpsandhotwallet.html#verify-the-hot-wallet-is-synchronizing-with-the-blockchain">Verify the Hot wallet is synchronizing with the blockchain</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_basic/coldwallet.html">Cold Wallet Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_basic/coldwallet.html#requirements">Requirements:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_basic/coldwallet.html#install-the-liberty-cold-wallet">Install the Liberty Cold Wallet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_basic/coldwallet.html#create-a-mn1-wallet-address-and-send-it-the-50000-collateral-coins">Create a MN1 Wallet Address and Send it the 50000 Collateral Coins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_basic/coldwallet.html#output-your-mn-txhash-and-outputidx-and-update-the-masternode-configuration-file">Output your MN TXhash and Outputidx and update the MasterNode configuration file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_basic/coldwallet.html#verify-the-masternode-conf-file-is-configure-correctly">Verify the Masternode.conf File is Configure Correctly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_basic/coldwallet.html#start-the-masternode-from-the-cold-wallet">Start the MasterNode from the Cold Wallet</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_basic/verifymnstarted.html">Verify the MasterNode Hot Wallet Started Successfully</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../masternodes/masternodes_finishingtouches/index.html">Finishing Touches</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_finishingtouches/configuringssh.html">Configure the User xlibmn to Use SSH Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_finishingtouches/configuringssh.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_finishingtouches/configuringssh.html#implementation-steps">Implementation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_finishingtouches/disablepasswordlogins_mn.html">Disable Password Logins and Root Login Access</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_finishingtouches/disablepasswordlogins_mn.html#disabling-password-login-capabilities">Disabling password login capabilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_finishingtouches/disablepasswordlogins_mn.html#disabling-root-login-access">Disabling root login access</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_finishingtouches/logrotate.html">Configure Logrotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_finishingtouches/hotwalletautostart.html">Enable Hot Wallet Auto Start</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../masternodes/masternodes_advanced/index.html">Advanced Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-vpsandhotwallet.html">VPS and Hot wallet Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-vpsandhotwallet.html#order-and-setup-a-linux-vps">Order and setup a Linux VPS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-vpsandhotwallet.html#create-a-new-user-and-login-as-xlibmn">Create a New User and Login as xlibmn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-vpsandhotwallet.html#download-and-configure-the-liberty-hot-wallet">Download and Configure the Liberty Hot wallet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-vpsandhotwallet.html#verify-the-hot-wallet-is-synchronizing-with-the-blockchain">Verify the Hot wallet is synchronizing with the blockchain</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-coldwallet.html">Cold Wallet Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-coldwallet.html#requirements">Requirements:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-coldwallet.html#install-the-liberty-cold-wallet">Install the Liberty Cold Wallet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-coldwallet.html#create-a-mn1-wallet-address-and-send-it-the-50000-collateral-coins">Create a MN1 Wallet Address and Send it the 50000 Collateral Coins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-coldwallet.html#output-your-mn-txhash-and-outputidx-and-update-the-masternode-configuration-file">Output your MN TXhash and Outputidx and update the MasterNode configuration file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-coldwallet.html#verify-the-masternode-conf-file-is-configure-correctly">Verify the Masternode.conf File is Configure Correctly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-coldwallet.html#start-the-masternode-from-the-cold-wallet">Start the MasterNode from the Cold Wallet</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_advanced/adv-verifymnstarted.html">Verify the MasterNode Hot Wallet Started Successfully</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../masternodes/masternodes_templates/index.html">Config File Templates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_templates/hotwalletconfig.html">Hot Wallet Configuration File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_templates/masternodeconfig.html">Cold Wallet Masternode Configuration File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../masternodes/masternodes_templates/coldwalletconfig.html">Cold Wallet Configuration File</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Liberty</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">VPS: Getting Started with an SSH Client and SSH Keys</a> &raquo;</li>
+        
+          <li><a href="index.html">PC Users - Generating and Using SSH Keys with Putty</a> &raquo;</li>
+        
+      <li>Download Putty and Configure SSH</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/vps_usingssh/pcusers/downloadputty.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="download-putty-and-configure-ssh">
+<span id="downloadputty"></span><h1>Download Putty and Configure SSH<a class="headerlink" href="#download-putty-and-configure-ssh" title="Permalink to this headline">¶</a></h1>
+<p>These instructions are intended for PC users that will be using Putty and SSH keys to login to the Linux VPS.  If you already have Putty installed and are able to connect to the Linux VPS using an SSH key then you can skip this process and proceed to the next section to <a class="reference internal" href="../disablepasswordlogins.html#disablepasswordlogins"><span class="std std-ref">disable password logins and root login access</span></a>.</p>
+<div class="section" id="download-putty">
+<span id="downloadputty-downloadputty"></span><h2>Download Putty<a class="headerlink" href="#download-putty" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Download the Putty terminal emulator that matches your OS.</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe">Download Putty 64 bit</a></li>
+<li><a class="reference external" href="https://the.earth.li/~sgtatham/putty/latest/w32/putty.exe">Download Putty 32 bit</a></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<ol class="arabic simple" id="moveputty-downloadputty" start="2">
+<li>Move the Putty application to your Desktop.</li>
+</ol>
+</div>
+<div class="section" id="create-a-new-saved-session-named-xlib01">
+<span id="createputtysession-downloadputty"></span><h2>Create a New Saved Session Named xlib01<a class="headerlink" href="#create-a-new-saved-session-named-xlib01" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Open Putty and create a saved session named <strong>xlib01</strong> for your Linux VPS.</p>
+<blockquote>
+<div><ul class="simple">
+<li>In the <strong>Hostname</strong> field, type in your Linux VPS IP address</li>
+<li>In the <strong>Saved Sessions</strong> field, type in the name <strong>xlib01</strong></li>
+<li>Click <strong>Save</strong> to save the session</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="configure-putty-to-use-an-ssh-key">
+<span id="puttyimportprivkey-downloadputty"></span><h2>Configure Putty to use an SSH Key<a class="headerlink" href="#configure-putty-to-use-an-ssh-key" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Follow these steps to add the SSH key into the <strong>xlib01</strong> Putty session.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Click on the saved session named <strong>xlib01</strong> and click <strong>Load</strong></li>
+<li>Expand the <strong>SSH</strong> Category on the left side of the window</li>
+<li>Click on the <strong>Auth</strong> Category so that it is highlighted</li>
+<li>Click on <strong>Browse</strong> on the right, under to the field <strong>Private key file for authentication</strong></li>
+<li>Browse to the folder that contains your SSH private key</li>
+<li>Select the <strong>sshprivatekey.ppk</strong> file and click <strong>Open</strong></li>
+<li>Scroll back up on the left under <strong>Category</strong> and click on the word <strong>Session</strong>, at the top of the window, to bring back the <strong>Saved Sessions</strong> page</li>
+<li>Click on <strong>Save</strong> to save the SSH Key to the <strong>xlib01</strong> session.</li>
+<li><strong>NOTE: This step is very important.  Make sure that your server xlib01 is loaded in the Saved Sessions window and that you click Save.  If this step is not completed successfully, then your SSH Key will not be saved to this session and you will have to repeat these steps again</strong></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<ol class="arabic" id="connectwithputty-downloadputty" start="2">
+<li><p class="first">In the Putty window, click <strong>Open</strong> to connect to your Linux VPS.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Click Yes on the PuTTY Security Alert to install the security certificate</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<ol class="arabic simple" id="loginasroot-downloadputty" start="3">
+<li>Login as the <strong>root</strong> user and type in, or paste in, your <strong>root</strong> password.<ul>
+<li><strong>The screen will not display your password</strong></li>
+<li><strong>NOTE:</strong> For those using Digital Ocean as your VPS provider, you will be prompted to change your <strong>root</strong> password.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="configure-the-linux-vps-to-use-an-ssh-key">
+<span id="changetosshdir-downloadputty"></span><h2>Configure the Linux VPS to use an SSH Key<a class="headerlink" href="#configure-the-linux-vps-to-use-an-ssh-key" title="Permalink to this headline">¶</a></h2>
+<p>You should be logged into the Linux VPS as the <strong>root</strong> user to complete the following steps:</p>
+<ol class="arabic">
+<li><p class="first">Change directory into the /root/.ssh directory or create it if necessary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">ssh</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<ul>
+<li><p class="first">NOTE: If the directory does not already exist then use this command to create it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">ssh</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic" id="editauthorizedkeys-downloadputty" start="2">
+<li><p class="first">Create and edit the file named authorized_keys with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">authorized_keys</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<ol class="arabic" id="pastesshkey-downloadputty" start="3">
+<li><p class="first">Paste the SSH public key into the <strong>authorized_keys</strong> file on the Linux VPS.  This is the public key that you generated and then copied from the PuttyGen application.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>CRITICAL NOTE:</strong> The SSH key that you paste in should begin with the text <strong>ssh-rsa</strong> and should end with a date, such as <strong>rsa-key-20181012</strong>.  If you do not get the entire key pasted into this file then the following steps will fail and you will have to repeat these steps.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Save and close the file by hitting <strong>Ctrl-X</strong>, and then type <strong>Y</strong> to confirm that you want to save it, and then hit <strong>ENTER</strong> to confirm the file name.</p>
+<blockquote>
+<div><ul class="simple">
+<li>NOTE: Your new SSH key is now saved in the <strong>/root/.ssh/authorized_keys</strong> file.  All future logins with the root username will allow you to login without being prompted for a password.</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p id="loginwithoutpass-downloadputty"><strong>Let’s test it!</strong></p>
+<ol class="arabic" start="5">
+<li><p class="first">Duplicate the current Putty session and login as the <strong>root</strong> user.  This will verify that you can now login to the Linux VPS without entering a password.</p>
+<blockquote>
+<div><ul class="simple">
+<li>To duplicate the existing Putty session to the Linux VPS, click the icon of two computers on the top left of the Putty application window and then select <strong>Duplicate Session</strong></li>
+<li><strong>NOTE: You should be automatically logged in to the Linux VPS without having to type in the root password</strong></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you are not automatically logged in without typing in a password then you likely did not save the SSH key into the putty session correctly, or you did not save the entire SSH key into the Linxu VPS file /root/.ssh/authorized_keys.  You will need to walk through the steps to save the SSH key in the Putty session and to ensure that the ENTIRE SSH key is added to the authorized_keys file on the Linux VPS before you proceed with the next section.</p>
+</div>
+<p><strong>If you are able to use Putty to login to the Linux VPS without being prompted for a password then you are done configuring your SSH keys and can proceed to the next section to disable password logins and root login access.</strong></p>
+<p><strong>For those of you that were already in the middle of the MasterNode setup process, you can return to the</strong> <a class="reference internal" href="../../masternodes/masternodes_finishingtouches/configuringssh.html#configuringssh-finishingtouches"><span class="std std-ref">Finishing Touches section to configure the user rupxmn to use SSH keys</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../disablepasswordlogins.html" class="btn btn-neutral float-right" title="All Users - Disabling Password Logins and Root Login Access" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pcgeneratesshkey.html" class="btn btn-neutral" title="Generating a New SSH Key" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Liberty Core Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'5.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
