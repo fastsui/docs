@@ -4,17 +4,17 @@
 .. _installnewwallet:
 
 ===================================
-Install the New Liberty Core Wallet
+Install the New Liberty Coin Wallet
 ===================================
 
-These instructions are intended for those that are installing the new Liberty Core wallet on your personal Windows or Mac computer.
+These instructions are intended for those that are installing the new Liberty Coin wallet on your personal Windows or Mac computer.
 
 Requirements:
 -------------
 	* Windows 7 or higher, Mac OS, or Linux
 	* Outgoing internet access to sync the blockchain and enable the MasterNode remotely
 
-Install the Liberty Core Wallet
+Install the Liberty Coin Wallet
 -------------------------------
 
 1. Open the following URL in a web browser to download the appropriate wallet version for your system:
@@ -49,9 +49,9 @@ Install the Liberty Core Wallet
 Documenting Your New Wallet Address
 -----------------------------------
 
-Now that the new Liberty Core wallet is installed, you need to document your new wallet address to prepare for the coin swap with the Swap Bot.
+Now that the new Liberty Coin wallet is installed, you need to document your new wallet address to prepare for the coin swap with the Swap Bot.
 
-1. Open the new Liberty Core wallet.
+1. Open the new Liberty Coin wallet.
 
 2. Click on **File** and select **Receiving addresses**.
 

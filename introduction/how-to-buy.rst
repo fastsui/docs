@@ -26,7 +26,7 @@ Liberty can be purchased and sold on a variety of exchanges.
   wallets. Exchanges are for trading, not for savings.
 
 
-DISCLAIMER: This list is provided for informational purposes only. Services listed here have not been evaluated or endorsed by Liberty Core and no guarantees are made as to the accuracy of this information. Please exercise discretion when using third-party services.
+DISCLAIMER: This list is provided for informational purposes only. Services listed here have not been evaluated or endorsed by Liberty Coin and no guarantees are made as to the accuracy of this information. Please exercise discretion when using third-party services.
 
 .. _exchanges:
 

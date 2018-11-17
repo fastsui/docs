@@ -6,7 +6,7 @@
 Cold Wallet Setup
 =================
 
-These instructions are intended for those that are installing the new Liberty Core wallet on your personal Windows or Mac computer.  The Cold wallet is where the MasterNode collateral will be locked.  After the setup is complete, this wallet will be the one receiving the MasterNode rewards.  This wallet will not have to run 24/7, once the setup is complete.
+These instructions are intended for those that are installing the new Liberty Coin wallet on your personal Windows or Mac computer.  The Cold wallet is where the MasterNode collateral will be locked.  After the setup is complete, this wallet will be the one receiving the MasterNode rewards.  This wallet will not have to run 24/7, once the setup is complete.
 
 Requirements:
 --------------

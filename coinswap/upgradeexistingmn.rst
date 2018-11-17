@@ -6,7 +6,7 @@
 Upgrade an Existing MasterNode VPS Hot Wallet
 =============================================
 
-These instructions are intended for those that are already running a MasterNode and want to upgrade an existing VPS with the new Liberty Core wallet.
+These instructions are intended for those that are already running a MasterNode and want to upgrade an existing VPS with the new Liberty Coin wallet.
 
 .. warning::  We created this process for those of you that want to continue to use the same VPS.  However, there is some minor risk involved as you may need to reboot the VPS during this process.  If you are running MasterNodes from other coins on this same VPS then those MasterNodes may be impacted by the VPS reboots.  To prevent the possible impact to the other MasterNodes you are running on this VPS, we suggest doing a fresh install, on a new VPS. :ref:`Link to VPS and Hot wallet basic setup guide<basicsetup>`
 

@@ -17,7 +17,7 @@ MasterNodes
    
 MasterNodes are servers with a pre-determined amount of collateral backing their power to validate transactions on the network.  Features of the MasterNode network include anonymous and instant transactions, as well as governance of the development of the Liberty network through a monthly budget and voting. This in itself is a first in the crypto world, and MasterNodes are necessary to achieve the privacy and speed that Liberty offers. 
 
-Your MasterNode server, running the Liberty Core Hot wallet, is enabled to validate transactions on the blockchain.  For this validation service you are rewarded in two ways.  The most straightforward way is in the case of MasterNode Rewards (set amount of currency).  The second is through the governance system.  Proposals are submitted and only MasterNode owners may vote on those proposals and thereby you help to control the growth and development of your investment.
+Your MasterNode server, running the Liberty Coin Hot wallet, is enabled to validate transactions on the blockchain.  For this validation service you are rewarded in two ways.  The most straightforward way is in the case of MasterNode Rewards (set amount of currency).  The second is through the governance system.  Proposals are submitted and only MasterNode owners may vote on those proposals and thereby you help to control the growth and development of your investment.
 
 **Requirements**
 
