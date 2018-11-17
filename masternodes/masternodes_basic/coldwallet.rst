@@ -1,6 +1,6 @@
 .. _coldwallet:
 .. _Video: https://www.youtube.com/watch?v=0TU044CYfl4/
-.. _Wallet_Download: https://github.com/Liberty-project/XLIB/releases/
+.. _Wallet_Download: https://github.com/project-liberty/wallet/releases
 
 =================
 Cold Wallet Setup

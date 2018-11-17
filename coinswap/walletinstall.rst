@@ -19,7 +19,7 @@ Install the Liberty Core Wallet
 
 1. Open the following URL in a web browser to download the appropriate wallet version for your system:
 
-	* https://github.com/Liberty-project/LBRT/releases
+	* https://github.com/project-liberty/wallet/releases
 
 .. warning:: Do not install the new wallet on the computer that contains an existing Liberty wallet that is currently holding LBRT coins.  You will need to either install the new wallet on a different computer or move your coins to a different computers' wallet, prior to installing the new wallet.  This is to prevent any chance that the new wallet will overwrite your current wallet and cause you to lose your coins.
 
@@ -77,7 +77,7 @@ This feature will allow you to control your wallet inputs, to verify that all co
 3. Click on the **Wallet** tab
 4. Click the check-box that says **Enable coin control features**
 
-Disable zLBRT Automint
+Disable zXLIB Automint
 ----------------------
 
 This feature will disable the auto minting of LBRT into zLBRT.
