@@ -5,18 +5,19 @@
 .. _masternodes_templates:
 
 
-=====================
-Config File Templates
-=====================
+=================================
+Scripts and Config File Templates
+=================================
 
 .. toctree::
    :maxdepth: 1
 
+   gdiscordinstallscript.rst
    hotwalletconfig.rst
    masternodeconfig.rst
    coldwalletconfig.rst
 
-This section is to provide users with the common templates that are used during the setup process.
+This section is to provide users with automation scripts and the common templates that are used during the setup process.
 
 
 
