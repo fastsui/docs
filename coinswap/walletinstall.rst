@@ -77,15 +77,15 @@ This feature will allow you to control your wallet inputs, to verify that all co
 3. Click on the **Wallet** tab
 4. Click the check-box that says **Enable coin control features**
 
-Disable zXLIB Automint
+Disable XLIBz Automint
 ----------------------
 
-This feature will disable the auto minting of LBRT into zLBRT.
+This feature will disable the auto minting of XLIB into XLIBz.
 
 1. Open the Liberty Wallet and click on **Settings**
 2. Select **Options**
 3. Click on the **Main** tab
-4. Uncheck the check-box that says **Enable zLBRT Automint**
+4. Uncheck the check-box that says **Enable XLIBz Automint**
 5. Click **OK** to close the wallet options.
 
 	**NOTE: THIS IS A CRITICAL STEP FOR THOSE THAT PLAN TO RUN A MASTERNODE**
