@@ -209,7 +209,7 @@ Download and Configure the Liberty Hot wallet
 * This is a real example of what the configuration file should look like when you are done updating the variables.
 * The **rpcpassword**, **IP address** (`199.247.10.25` in this example), and **masternodeprivkey** will all be different for you::
 	
-	rpcuser=rupxuser 
+	rpcuser=xlibuser 
 	rpcpassword=someSUPERsecurePASSWORD3746375620 
 	rpcport=10416 
 	rpcallowip=127.0.0.1 

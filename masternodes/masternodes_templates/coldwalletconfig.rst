@@ -20,15 +20,15 @@ This section is to provide users with a list of possible options that you can co
 
 	staking=1
 
-3. Disable zXLIB autominting::
+3. Disable XLIBz autominting::
 
 	enablezeromint=0
 
-4. Enable zXLIB autominting::
+4. Enable XLIBz autominting::
 
 	enablezeromint=1	
 
-5. Configure the wallet to auto mint 20% of staking rewards into zXLIB instead of XLIB.  The number can be modified from 1 - 100::
+5. Configure the wallet to auto mint 20% of staking rewards into XLIBz instead of XLIB.  The number can be modified from 1 - 100::
 	
 	zeromintpercentage=20	
 	
