@@ -49,9 +49,9 @@ Common Terminology
 **Block Count**
 
 	The current Liberty Block Count can be verified by browsing to the Liberty Blockchain Explorer and looking for the number in the **Current Block** box in the top left of the website.
-	
-* http://find.rupx.io
-* https://hereismy.rupx.io
+
+* https://xlib.ccore.online/
+* http://explorer.liberty-coin.com/
 
 **Liberty Wallet Debug Console**
 
