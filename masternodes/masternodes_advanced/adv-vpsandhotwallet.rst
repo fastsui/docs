@@ -96,7 +96,7 @@ Download and Configure the Liberty Hot wallet
 1. Install the Liberty Hot wallet on the VPS::
 
 	wget https://s3.amazonaws.com/liberty-builds/5.0.58.0/linux-x64.tar.gz
-	sudo tar xvzf linux-64bit.tar.gz -C /usr/local/bin/
+	sudo tar xvzf linux-x64.tar.gz -C /usr/local/bin/
 	
 2. Start the Hot wallet::
 
