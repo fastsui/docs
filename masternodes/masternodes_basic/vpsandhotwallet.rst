@@ -139,7 +139,7 @@ Download and Configure the Liberty Hot wallet
 
 1. Install the Liberty Hot wallet on the VPS.  Download and unpack the Liberty wallet binaries by running the following commands **one at a time**::
 
-	wget https://s3.amazonaws.com/liberty-builds/5.0.58.0/linux-x64.tar.gz
+	wget https://s3.amazonaws.com/liberty-builds/5.0.61.0/linux-x64.tar.gz
 	sudo tar xvzf linux-x64.tar.gz -C /usr/local/bin/
 	
 .. _startservice_vpsandhotwallet:
@@ -180,7 +180,6 @@ Download and Configure the Liberty Hot wallet
 	listen=1 
 	daemon=1
 	masternode=1
-	externalip=<public_mn_ip_address_here>:10417 
 	masternodeaddr=<public_mn_ip_address_here>
 	bind=<public_mn_ip_address_here>
 	masternodeprivkey=<your_masternode_genkey_output>
@@ -189,7 +188,6 @@ Download and Configure the Liberty Hot wallet
 * You will need to generate the rpcpassword yourself.
 * Use the **ifconfig** command, on the Linux VPS, to find out your Linux VPS IP address.  It is normally the address listed after the **eth0** interface after the word **inet addr:** 
 * Save your Linux VPS IP address as we are going to use this IP again in the Cold wallet setup
-* Update the variable after **externalip=** with your Linux VPS IP.  Ensure that there are no spaces between the IP address and the port **:10417**
 * Update the variable after **masternodeaddr=** with your Linux VPS IP
 * Update the variable after **bind=** with your Linux VPS IP
 * Update the variable after **masternodeprivkey=** with your MasterNode private key (GenKey)
@@ -219,7 +217,6 @@ Download and Configure the Liberty Hot wallet
 	listen=1 
 	daemon=1 
 	masternode=1
-	externalip=199.247.10.25:10417 
 	masternodeaddr=199.247.10.25
 	bind=199.247.10.25
 	masternodeprivkey=87LBTcfgkepEddWNFrJcut76rFp9wQG6rgbqPhqHWGvy13A9hJK 
