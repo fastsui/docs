@@ -48,7 +48,7 @@ Order and setup a Linux VPS
 
 4. Install Linux updates.  Run the following commands **one at a time**::
 
-	apt install make
+	apt install make -y
 	apt install aptitude -y
 	apt-get update -y
 	apt-get upgrade -y
